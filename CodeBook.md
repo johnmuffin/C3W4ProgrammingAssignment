@@ -10,7 +10,7 @@ date: "2023-08-24"
 
 The data set used within this assignment is from [UC Irvine - Machine Learning Repository](http://archive.ics.uci.edu/dataset/240/human+activity+recognition+using+smartphones). As taken from the website, and file metadata:
 
-### Information 
+### Information
 
 > The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data.
 >
@@ -22,7 +22,7 @@ The data set used within this assignment is from [UC Irvine - Machine Learning R
 >
 > An updated version of this dataset can be found at <http://archive.ics.uci.edu/ml/datasets/Smartphone-Based+Recognition+of+Human+Activities+and+Postural+Transitions>. It includes labels of postural transitions between activities and also the full raw inertial signals instead of the ones pre-processed into windows.
 
-### Has Missing Values? 
+### Has Missing Values?
 
 > No
 
@@ -66,9 +66,8 @@ The data set used within this assignment is from [UC Irvine - Machine Learning R
 >
 > -   fBodyAccJerk-XYZ
 >
-> ```{=html}
 > <!-- -->
-> ```
+>
 > -   fBodyGyro-XYZ
 >
 > -   fBodyAccMag
@@ -95,16 +94,14 @@ The data set used within this assignment is from [UC Irvine - Machine Learning R
 >
 > -   energy(): Energy measure. Sum of the squares divided by the number of values.
 >
-> ```{=html}
 > <!-- -->
-> ```
+>
 > -   iqr(): Interquartile range
 >
 > -   entropy(): Signal entropy
 >
-> ```{=html}
 > <!-- -->
-> ```
+>
 > -   arCoeff(): Autorregresion coefficients with Burg order equal to 4
 >
 > -   correlation(): correlation coefficient between two signals
@@ -139,26 +136,23 @@ The data set used within this assignment is from [UC Irvine - Machine Learning R
 
 The specific transformations made on this data set was to rename sets of duplicated variables.
 
-+----------------------------------+--------------------------------------+-----------------------------------+
-| fBodyAcc-bandsEnergy()           | fBodyAcc-AccJerk()                   | fBodyGyro-bandsEnergy()           |
-+==================================+======================================+===================================+
-| |                              | | |                                  | | |                               | |
-| |------------------------------| | |----------------------------------| | |-------------------------------| |
-| | fBodyAcc-bandsEnergy()-1,8   | | | fBodyAccJerk-bandsEnergy()-1,8   | | | fBodyGyro-bandsEnergy()-1,8   | |
-| | fBodyAcc-bandsEnergy()-9,16  | | | fBodyAccJerk-bandsEnergy()-9,16  | | | fBodyGyro-bandsEnergy()-9,16  | |
-| | fBodyAcc-bandsEnergy()-17,24 | | | fBodyAccJerk-bandsEnergy()-17,24 | | | fBodyGyro-bandsEnergy()-17,24 | |
-| | fBodyAcc-bandsEnergy()-25,32 | | | fBodyAccJerk-bandsEnergy()-25,32 | | | fBodyGyro-bandsEnergy()-25,32 | |
-| | fBodyAcc-bandsEnergy()-33,40 | | | fBodyAccJerk-bandsEnergy()-33,40 | | | fBodyGyro-bandsEnergy()-33,40 | |
-| | fBodyAcc-bandsEnergy()-41,48 | | | fBodyAccJerk-bandsEnergy()-41,48 | | | fBodyGyro-bandsEnergy()-41,48 | |
-| | fBodyAcc-bandsEnergy()-49,56 | | | fBodyAccJerk-bandsEnergy()-49,56 | | | fBodyGyro-bandsEnergy()-49,56 | |
-| | fBodyAcc-bandsEnergy()-57,64 | | | fBodyAccJerk-bandsEnergy()-57,64 | | | fBodyGyro-bandsEnergy()-57,64 | |
-| | fBodyAcc-bandsEnergy()-1,16  | | | fBodyAccJerk-bandsEnergy()-1,16  | | | fBodyGyro-bandsEnergy()-1,16  | |
-| | fBodyAcc-bandsEnergy()-17,32 | | | fBodyAccJerk-bandsEnergy()-17,32 | | | fBodyGyro-bandsEnergy()-17,32 | |
-| | fBodyAcc-bandsEnergy()-33,48 | | | fBodyAccJerk-bandsEnergy()-33,48 | | | fBodyGyro-bandsEnergy()-33,48 | |
-| | fBodyAcc-bandsEnergy()-49,64 | | | fBodyAccJerk-bandsEnergy()-49,64 | | | fBodyGyro-bandsEnergy()-49,64 | |
-| | fBodyAcc-bandsEnergy()-1,24  | | | fBodyAccJerk-bandsEnergy()-1,24  | | | fBodyGyro-bandsEnergy()-1,24  | |
-| | fBodyAcc-bandsEnergy()-25,48 | | | fBodyAccJerk-bandsEnergy()-25,48 | | | fBodyGyro-bandsEnergy()-25,48 | |
-+----------------------------------+--------------------------------------+-----------------------------------+
+
+| **fBodyAcc-bandsEnergy()** | **fBodyAcc-AccJerk()** | **fBodyGyro-bandsEnergy()** |
+| --- | --- | --- |
+| fBodyAcc-bandsEnergy()-1,8   | fBodyAccJerk-bandsEnergy()-1,8   | fBodyGyro-bandsEnergy()-1,8   |
+| fBodyAcc-bandsEnergy()-9,16  | fBodyAccJerk-bandsEnergy()-9,16  | fBodyGyro-bandsEnergy()-9,16  |
+| fBodyAcc-bandsEnergy()-17,24 | fBodyAccJerk-bandsEnergy()-17,24 | fBodyGyro-bandsEnergy()-17,24 |
+| fBodyAcc-bandsEnergy()-25,32 | fBodyAccJerk-bandsEnergy()-25,32 | fBodyGyro-bandsEnergy()-25,32 |
+| fBodyAcc-bandsEnergy()-33,40 | fBodyAccJerk-bandsEnergy()-33,40 | fBodyGyro-bandsEnergy()-33,40 |
+| fBodyAcc-bandsEnergy()-41,48 | fBodyAccJerk-bandsEnergy()-41,48 | fBodyGyro-bandsEnergy()-41,48 |
+| fBodyAcc-bandsEnergy()-49,56 | fBodyAccJerk-bandsEnergy()-49,56 | fBodyGyro-bandsEnergy()-49,56 |
+| fBodyAcc-bandsEnergy()-57,64 | fBodyAccJerk-bandsEnergy()-57,64 | fBodyGyro-bandsEnergy()-57,64 |
+| fBodyAcc-bandsEnergy()-1,16  | fBodyAccJerk-bandsEnergy()-1,16  | fBodyGyro-bandsEnergy()-1,16  |
+| fBodyAcc-bandsEnergy()-17,32 | fBodyAccJerk-bandsEnergy()-17,32 | fBodyGyro-bandsEnergy()-17,32 |
+| fBodyAcc-bandsEnergy()-33,48 | fBodyAccJerk-bandsEnergy()-33,48 | fBodyGyro-bandsEnergy()-33,48 |
+| fBodyAcc-bandsEnergy()-49,64 | fBodyAccJerk-bandsEnergy()-49,64 | fBodyGyro-bandsEnergy()-49,64 |
+| fBodyAcc-bandsEnergy()-1,24  | fBodyAccJerk-bandsEnergy()-1,24  | fBodyGyro-bandsEnergy()-1,24  |
+| fBodyAcc-bandsEnergy()-25,48 | fBodyAccJerk-bandsEnergy()-25,48 | fBodyGyro-bandsEnergy()-25,48 |
 
 : Duplicated Variables
 
